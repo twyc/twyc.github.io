@@ -1,0 +1,698 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      Python学习笔记 | twyc&#39;s blog
+    
+  </title>
+  <meta name="author" content="twyc">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 5.4.1"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">获取中...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「Python学习笔记」
+		
+	</p>
+
+	
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2022/01/24/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">
+		Python学习笔记
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	更新于
+
+	<a href="/2022/01/24/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">
+		<time datetime="2022-01-24T14:52:58.000Z" itemprop="dateUpdated">
+	  		2022-01-24
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+				
+	<i class="icon-price-tags"></i>
+	
+		<a href="/tags/Python/" class=" ">
+			Python
+		</a>
+	
+		
+			</span>
+			
+			
+
+
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<h3 id="三元表达式和列表生成式（List-Comprehensions）"><a href="#三元表达式和列表生成式（List-Comprehensions）" class="headerlink" title="三元表达式和列表生成式（List Comprehensions）"></a>三元表达式和列表生成式（List Comprehensions）</h3><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017317609699776">列表生成式</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/4559e64c4f2395c4773fbbd28f13e115.html">python中的三元表达式，列表解析 和 生成器表达式 - 华为云</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 列表解析只能有一个if</span><br><span class="line"></span><br><span class="line">[i for i in range(1, 11) if i&amp;1]</span><br><span class="line"></span><br><span class="line"># [1, 3, 5, 7, 9]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 列表解析和三元表达式同时使用</span><br><span class="line"></span><br><span class="line">[-x if x % 2 == 0 else 1 + x for x in range(1, 11)]</span><br><span class="line"></span><br><span class="line"># [2, -2, 4, -4, 6, -6, 8, -8, 10, -10]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for前面的if ... else是表达式，而for后面的if是过滤条件，不能带else。</span><br></pre></td></tr></table></figure>
+
+<p>字典生成式同理</p>
+<h3 id="args和-kwargs"><a href="#args和-kwargs" class="headerlink" title="* args和** kwargs"></a>* args和** kwargs</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cunchi4221/article/details/107476079">Python * args和** kwargs_从零开始的教程世界-CSDN博客</a></p>
+<p>args和kwargs的名称不强制是惯例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"># name是形参 Formal Arguments</span><br><span class="line"></span><br><span class="line">def print_hi(name):</span><br><span class="line"></span><br><span class="line">    print(f&#x27;Hi, &#123;name&#125;&#x27;)</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"># non-keyworded arguments *args 非关键字参数 tuple</span><br><span class="line"></span><br><span class="line"># keyworded arguments or named arguments **kwargs 关键字参数或者叫做命名参数 dict</span><br><span class="line"></span><br><span class="line">def foo(*args, **kwargs):</span><br><span class="line"></span><br><span class="line">    print(&#x27;args = &#x27;, args)</span><br><span class="line"></span><br><span class="line">    print(&#x27;kwargs = &#x27;, kwargs)</span><br><span class="line"></span><br><span class="line">    print(&#x27;---------------------------------------&#x27;)</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">foo(1, 2, 3, 4)</span><br><span class="line"></span><br><span class="line">foo(a=1, b=2, c=3)</span><br><span class="line"></span><br><span class="line">foo(1, 2, 3, 4, a=1, b=2, c=3)</span><br><span class="line"></span><br><span class="line">foo(&#x27;a&#x27;, 1, None, a=1, b=&#x27;2&#x27;, c=3)</span><br><span class="line"></span><br><span class="line"># foo(1, a=1, 2, b=2) 报错</span><br><span class="line"></span><br><span class="line">foo(*(1, 2, 3, 4), **&#123;</span><br><span class="line"></span><br><span class="line">    &#x27;wyc&#x27; : 100</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="项目中的应用"><a href="#项目中的应用" class="headerlink" title="项目中的应用"></a>项目中的应用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot; </span><br><span class="line"></span><br><span class="line">getargspec方法的注释</span><br><span class="line"></span><br><span class="line">A tuple of four things is returned: (args, varargs, keywords, defaults).</span><br><span class="line"></span><br><span class="line">&#x27;args&#x27; is a list of the argument names, including keyword-only argument names.</span><br><span class="line"></span><br><span class="line">&#x27;varargs&#x27; and &#x27;keywords&#x27; are the names of the * and ** parameters or None.</span><br><span class="line"></span><br><span class="line">&#x27;defaults&#x27; is an n-tuple of the default values of the last n parameters. </span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">def models_wrapper(func):</span><br><span class="line"></span><br><span class="line">    spec = inspect.getargspec(func) # 获取func方法的信息</span><br><span class="line"></span><br><span class="line">    fargs = spec.args # 形参</span><br><span class="line"></span><br><span class="line">    keywords = spec.keywords # 命名参数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @functools.wraps(func)</span><br><span class="line"></span><br><span class="line">    def new_func(*args, **kwargs):</span><br><span class="line"></span><br><span class="line">        if keywords: # 有原方法有命名参数则直接调用原方法</span><br><span class="line"></span><br><span class="line">            ret = func(*args, **kwargs)</span><br><span class="line"></span><br><span class="line">        else:        # 将原方法的形参合入新方法的命名参数中</span><br><span class="line"></span><br><span class="line">            qdict = &#123;k: kwargs[k] for k in fargs if k in kwargs&#125;</span><br><span class="line"></span><br><span class="line">            ret = func(*args, **qdict)</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        return httpdef.ERROR_NOERROR, ret</span><br><span class="line"></span><br><span class="line">    return new_func</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h3><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017328525009056">函数式编程</a></p>
+<h4 id="map-reduce-filter"><a href="#map-reduce-filter" class="headerlink" title="map/reduce/filter"></a>map/reduce/filter</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">def f(x):</span><br><span class="line"></span><br><span class="line">    return x * x</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def g(x, y):</span><br><span class="line"></span><br><span class="line">    return x * 10 + y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def h(x):</span><br><span class="line"></span><br><span class="line">    return x &amp; 1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">l = [1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br><span class="line"></span><br><span class="line">it = map(f, l)</span><br><span class="line"></span><br><span class="line">list(it)</span><br><span class="line"></span><br><span class="line">reduce(g, l) # from functools import reduce </span><br><span class="line"></span><br><span class="line">it = filter(h, l)</span><br><span class="line"></span><br><span class="line">list(it)</span><br></pre></td></tr></table></figure>
+
+<h4 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">sorted([&#x27;bob&#x27;, &#x27;about&#x27;, &#x27;Zoo&#x27;, &#x27;Credit&#x27;], key=str.lower, reverse=True)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">实现自定义排序的关键在key参数的映射函数，函数的参数即为列表中的元素</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">L = [(&#x27;Bob&#x27;, 75), (&#x27;Adam&#x27;, 92), (&#x27;Bart&#x27;, 66), (&#x27;Lisa&#x27;, 88)]</span><br><span class="line"></span><br><span class="line"># 对L分别按名字和分数排序</span><br><span class="line"></span><br><span class="line">def by_name(t):</span><br><span class="line"></span><br><span class="line">    return t[0]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def by_score(t):</span><br><span class="line"></span><br><span class="line">    return t[1]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sorted(L, key=by_name)</span><br><span class="line"></span><br><span class="line">sorted(L, key=by_score)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = lambda x: x * x</span><br><span class="line"></span><br><span class="line">f(5)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/python-func-decorators.html">Python 函数装饰器 | 菜鸟教程</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"># 一个简单的装饰器 </span><br><span class="line"></span><br><span class="line">def a_new_decorator(a_func):</span><br><span class="line"></span><br><span class="line">    def wrapTheFunction():</span><br><span class="line"></span><br><span class="line">        print(&quot;原函数调用之前&quot;)</span><br><span class="line"></span><br><span class="line">        a_func()</span><br><span class="line"></span><br><span class="line">        print(&quot;原函数调用之后&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return wrapTheFunction</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@a_new_decorator</span><br><span class="line"></span><br><span class="line">def a_function_requiring_decoration():</span><br><span class="line"></span><br><span class="line">    print(&quot;111&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#the @a_new_decorator等价于下面这句</span><br><span class="line"></span><br><span class="line">a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(a_function_requiring_decoration.__name__)</span><br><span class="line"></span><br><span class="line"># Output: wrapTheFunction</span><br><span class="line"></span><br><span class="line"># 原函数的名字和注释文档被重写了 用functools.wraps规避这件事</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">from functools import wraps</span><br><span class="line"></span><br><span class="line">def decorator_name(f):</span><br><span class="line"></span><br><span class="line">    @wraps(f)</span><br><span class="line"></span><br><span class="line">    def decorated(*args, **kwargs):</span><br><span class="line"></span><br><span class="line">        if not can_run:</span><br><span class="line"></span><br><span class="line">            return &quot;Function will not run&quot;</span><br><span class="line"></span><br><span class="line">        return f(*args, **kwargs)</span><br><span class="line"></span><br><span class="line">    return decorated</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">@decorator_name</span><br><span class="line"></span><br><span class="line">def func():</span><br><span class="line"></span><br><span class="line">    return(&quot;Function is running&quot;)</span><br><span class="line"></span><br><span class="line"> can_run = True</span><br><span class="line"></span><br><span class="line">print(func())</span><br><span class="line"></span><br><span class="line"># Output: Function is running</span><br><span class="line"></span><br><span class="line"> can_run = False</span><br><span class="line"></span><br><span class="line">print(func())</span><br><span class="line"></span><br><span class="line"># Output: Function will not run</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 装饰器可以带参数 注意参数和接收原函数的参数不能在同一参数列表内，即要在最外面再定义一个方法用来接受参数</span><br><span class="line"></span><br><span class="line">def logit(logfile=&#x27;out.log&#x27;):</span><br><span class="line"></span><br><span class="line">    def logging_decorator(func):</span><br><span class="line"></span><br><span class="line">        @wraps(func)</span><br><span class="line"></span><br><span class="line">        def wrapped_function(*args, **kwargs):</span><br><span class="line"></span><br><span class="line">            log_string = func.__name__ + &quot; was called&quot;</span><br><span class="line"></span><br><span class="line">            print(log_string)</span><br><span class="line"></span><br><span class="line">            # 打开logfile，并写入内容</span><br><span class="line"></span><br><span class="line">            with open(logfile, &#x27;a&#x27;) as opened_file:</span><br><span class="line"></span><br><span class="line">                # 现在将日志打到指定的logfile</span><br><span class="line"></span><br><span class="line">                opened_file.write(log_string + &#x27;\n&#x27;)</span><br><span class="line"></span><br><span class="line">            return func(*args, **kwargs)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return wrapped_function</span><br><span class="line"></span><br><span class="line">    return logging_decorator</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@logit(&quot;就叫log111&quot;)</span><br><span class="line"></span><br><span class="line">def myfunc1():</span><br><span class="line"></span><br><span class="line">    print(&quot;myfun1进来了&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h4><p>可以接收函数对象、<code>*args</code>和<code>**kw</code>这3个参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">int2 = functools.partial(int, base=2)</span><br><span class="line"></span><br><span class="line">int2(&#x27;10010&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kw = &#123; &#x27;base&#x27;: 2 &#125;</span><br><span class="line"></span><br><span class="line">int(&#x27;10010&#x27;, **kw)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">max2 = functools.partial(max, 10)</span><br><span class="line"></span><br><span class="line">max2(5, 6, 7)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">args = (10, 5, 6, 7)</span><br><span class="line"></span><br><span class="line">max(*args)</span><br></pre></td></tr></table></figure>
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">相关文章</div>
+					<div>评论</div>
+					<div>分享</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">返回顶部</a>
+		
+		
+			<a href="/2022/01/24/hello-world/" title="Hello World" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2022/01/24/hello-world/" title="Hello World">
+								Hello World			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 24日, 2022				
+							</p>
+							<p class="relate-post-content">
+								Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using ...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2022/01/24/hello-world/" title="Hello World">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Hello World"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2022, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+  
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>
